@@ -6,3 +6,12 @@
 // 04 - string.match() == //? Return Array of characters.
 // 04 - string.search() == //? returns the index of the first match in the string.
 // 04 - string.slice() == //? returns a new string, without modifying the original string.
+
+
+// some other easy methods --
+// toLowerCase()
+// toUpperCase()
+// toString()
+// trimLeft() or trimStart()
+// trimRight() or trimEnd()
+// trim()
