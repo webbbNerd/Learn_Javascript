@@ -262,3 +262,36 @@ var obj = { name: "Utkarsh", class: "Master" };
 callFunc.bind(obj, "Singh")();
 
 // ---------------------------------------------------------------------------------------------
+//? obj prototype
+const obj = {
+  name: "demob",
+  getName: (){
+    return this.name
+  },
+  getRoll: (){
+    return this.roll
+  }
+}
+
+const obj2 = {
+  roll: "play",
+  __proto__ : obj  // now obj is accessible inside obj2
+}
+
+console.log(obj2.getRoll()) // play
+
+
+//? set : no key value pairs
+// add(), has(), delete(), clear()
+
+//? WeakSet
+// can only store objects
+// can't iterate through prototype
+
+//? map : can save key values
+// new Map()
+// set(), delete(), clear(), get()
+
+//? WeakMap
+// can't iterate through it
+// can only store objrcts
