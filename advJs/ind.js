@@ -131,9 +131,9 @@ for (var key in obj) {
 
 // ---------------------------------------------------------------------------------------------
 
-hello()
-hello1()
-hello2()
+hello();
+hello1();
+hello2();
 hello3();
 
 function hello() {
@@ -155,7 +155,7 @@ var hello3 = () => {
 function x(a) {
   var val = a;
   const y = (b) => {
-    if (b == undefined) return val
+    if (b == undefined) return val;
     val *= b;
     return x(val);
   };
@@ -167,9 +167,11 @@ console.log(x(1)(2)(3)(4)());
 // ?currying
 
 const currySum = (a) => {
-  var initialSum = a
+  var initialSum = a;
   const addNextValue = (nextValue) => {
-    if(nextValue == undefined){return initialSum}
+    if (nextValue == undefined) {
+      return initialSum;
+    }
     const newSum = initialSum + nextValue;
     return currySum(newSum);
   };
@@ -180,7 +182,7 @@ console.log(currySum(1)(2)(3)(4)());
 
 // ---------------------------------------------------------------------------------------------
 
-console.log(this)
+console.log(this);
 
 if (true) {
   var x = 10;
@@ -211,7 +213,7 @@ var paragraphs = x.map((y, index) => {
 
 x.forEach((y, index) => {
   var para = document.createElement("p");
-  para.classList.add("animated-paragraph")
+  para.classList.add("animated-paragraph");
   para.innerText = y;
   document.body.appendChild(para);
 });
@@ -219,10 +221,10 @@ x.forEach((y, index) => {
 // ---------------------------------------------------------------------------------------------
 //? creating method
 
-Array.prototype.positive = function (){
+Array.prototype.positive = function () {
   return this.filter((x) => {
-    return x > 0
-  })
+    return x > 0;
+  });
 };
 
 console.log([-1, -2, 0, 1, 2].positive());
@@ -245,8 +247,8 @@ for (var [i, j] of Object.entries(obj)) {
 
 // ---------------------------------------------------------------------------------------------
 
-console.log(x)     // reference error tdz
-let x = 10
+console.log(x); // reference error tdz
+let x = 10;
 
 // ---------------------------------------------------------------------------------------------
 //? call, apply, bind
@@ -265,21 +267,20 @@ callFunc.bind(obj, "Singh")();
 //? obj prototype
 const obj = {
   name: "demob",
-  getName: (){
-    return this.name
+  getName: () => {
+    return this.name;
   },
-  getRoll: (){
-    return this.roll
-  }
-}
+  getRoll: () => {
+    return this.roll;
+  },
+};
 
 const obj2 = {
   roll: "play",
-  __proto__ : obj  // now obj is accessible inside obj2
-}
+  __proto__: obj, // now obj is accessible inside obj2
+};
 
-console.log(obj2.getRoll()) // play
-
+console.log(obj2.getRoll()); // play
 
 //? set : no key value pairs
 // add(), has(), delete(), clear()
