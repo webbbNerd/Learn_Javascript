@@ -165,3 +165,26 @@ var callthr = throttle();
 // access control allow method
 
 // =======================================================
+//? Higher order function
+
+let funct = (val) => {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res(val);
+    }, 2000);
+  });
+};
+
+let highFunc = (fn) => async (req, res, next) => {
+  try {
+    const val = await fn("tru");
+    console.log(val);
+  } catch (err) {
+    console.log(err, "error");
+  }
+};
+
+highFunc(funct)();
+
+// =======================================================
+
