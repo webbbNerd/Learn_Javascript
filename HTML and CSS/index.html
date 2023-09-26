@@ -1,0 +1,249 @@
+<!-- HTML attributes provide additional information about HTML elements. -->
+<a> tag -- href attribute
+<img> tag-- src attribute
+<!-- style attribute -->
+
+<!-- ================================================================================================================================ -->
+
+<!--
+Using CSS
+CSS can be added to HTML documents in 3 ways:
+
+Inline - by using the style attribute inside HTML elements
+Internal - by using a <style> element in the <head> section
+External - by using a <link> element to link to an external CSS file -->
+
+<!-- ================================================================================================================================ -->
+
+<!-- Examples of non-semantic elements: <div> and <span> - Tells nothing about its content. -->
+
+<!-- Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content. -->
+
+<!-- ================================================================================================================================ -->
+Some characters are reserved in HTML.
+
+If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.
+
+Character entities are used to display reserved characters in HTML.
+
+A character entity looks like this:
+
+&entity_name;
+OR
+
+&#entity_number;
+
+<!-- ================================================================================================================================ -->
+To display an HTML page correctly, a web browser must know which character set to use.
+
+From ASCII to UTF-8
+ASCII was the first character encoding standard. ASCII defined 128 different characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like ! $ + - ( ) @ < > .
+
+<!-- ================================================================================================================================ -->
+<!-- ?Html5 -->
+
+  Semantic Elements: HTML5 introduced new semantic elements like <header>, <footer>, <nav>, <article>, <section>, and <aside>. These elements provide better structure and meaning to web documents, making it easier for search engines and assistive technologies to understand the content.
+
+  Video and Audio: HTML5 introduced the <video> and <audio> elements, allowing developers to embed multimedia content directly into web pages without relying on third-party plugins like Flash. These elements support various media formats and provide a native and accessible way to integrate video and audio.
+
+  Canvas: The <canvas> element introduced a drawing API for rendering graphics, animations, and interactive content directly within the browser. It's commonly used for games, data visualizations, and drawing applications.
+
+  SVG Support: HTML5 improved support for Scalable Vector Graphics (SVG), making it easier to embed and manipulate vector graphics within web pages.
+
+  WebSockets: HTML5 introduced the WebSocket API, enabling bidirectional, real-time communication between the browser and the server. This is particularly useful for building interactive applications, chat applications, and online gaming.
+
+  Local Storage: The localStorage and sessionStorage APIs provide a way to store data persistently in the browser. These storage options are more robust and efficient than cookies and are often used for caching data and storing user preferences.
+
+  Web Workers: Web Workers allow for concurrent execution of JavaScript code in the background, helping to improve performance by offloading CPU-intensive tasks to separate threads. This is particularly valuable for handling tasks like data processing and calculations.
+
+  Geolocation: HTML5 introduced the Geolocation API, which allows websites to request and access the user's geographic location through the browser. This feature is commonly used for location-based services and mapping applications.
+
+  Drag and Drop: HTML5 introduced the Drag and Drop API, making it easier to implement drag-and-drop interactions in web applications.
+
+  Form Enhancements: HTML5 introduced new form elements like <input type="email">, <input type="url">, <input type="number">, and more, along with attributes for validation, making it easier to create user-friendly and mobile-responsive forms.
+
+  Responsive Images: The srcset and sizes attributes allow developers to provide multiple image resources and specify which one to use based on the user's screen size and resolution, improving image loading performance on various devices.
+
+  ContentEditable: The contenteditable attribute allows developers to make elements, such as <div> or <span>, editable by users. This is commonly used for building rich-text editors and inline editing features.
+
+  Offline Web Applications: HTML5 introduced the Application Cache (AppCache) feature, which enables web applications to work offline by storing resources locally. This feature is commonly used in Progressive Web Apps (PWAs).
+
+  Web Storage: HTML5 introduced the localStorage and sessionStorage APIs for storing data in the browser, providing a more efficient and robust alternative to cookies.
+
+  Web Components: Although not directly part of HTML5, the concept of web components, including Custom Elements, Shadow DOM, and HTML Templates, became popular during the HTML5 era. These features allow developers to create reusable and encapsulated UI components.
+
+  <!-- ================================================================================================================================ -->
+<!-- ?CSS3 -->
+
+Selectors: CSS3 introduced several new selectors to provide more precise and flexible targeting of HTML elements, including:
+
+:nth-child() and :nth-of-type(): These selectors allow you to select elements based on their position within a parent element.
+
+:not(): This selector lets you select elements that do not match a specified selector.
+
+:checked, :focus, :hover, and others: These pseudo-classes make it easier to style elements based on their interaction states.
+
+Box Model: CSS3 introduced features to control the box model more effectively:
+
+box-sizing: The box-sizing property allows you to control how the width and height of elements are calculated, including options like content-box and border-box.
+Backgrounds and Borders: CSS3 introduced several enhancements for backgrounds and borders:
+
+border-radius: This property enables rounded corners for elements.
+
+background-size: It allows you to specify the size of background images.
+
+background-clip and background-origin: These properties control how background images are clipped and positioned.
+
+border-image: This property lets you create complex border styles using images.
+
+Text Effects: CSS3 introduced several text-related features:
+
+text-shadow: It allows you to add shadows to text.
+
+text-overflow: This property controls how text is truncated when it overflows its container.
+
+word-wrap and white-space: These properties enable better control over text wrapping and white space handling.
+
+Transformations: CSS3 introduced 2D and 3D transformations:
+
+transform: This property allows you to apply various transformations, such as rotation, scaling, skewing, and translation.
+Transitions: CSS3 introduced the transition property, which allows you to smoothly animate changes to an element's properties, such as color, size, and opacity.
+
+Animations: CSS3 introduced keyframe animations through the @keyframes rule, enabling the creation of complex animations with fine-grained control.
+
+Flexbox: CSS3 introduced the Flexbox layout model, which simplifies complex layout tasks and provides better control over the arrangement and alignment of elements within a container.
+
+Grid Layout: CSS3 introduced the Grid layout system, allowing developers to create two-dimensional layouts with rows and columns, improving control over page structure.
+
+Media Queries: While introduced in CSS2, CSS3 expanded the capabilities of media queries, enabling responsive design by allowing styles to adapt to different screen sizes, orientations, and devices.
+
+Custom Properties (Variables): CSS3 introduced custom properties (often called CSS variables), allowing developers to define reusable values within CSS stylesheets.
+
+Filter Effects: CSS3 introduced the filter property, which enables the application of various visual effects, such as blurring, color manipulation, and brightness adjustments.
+
+Multi-column Layout: CSS3 introduced the column properties for creating multi-column text layouts, similar to print magazines.
+
+Calculation Functions: CSS3 introduced the calc() function, which allows you to perform calculations when specifying property values. For example, you can use it to calculate widths and heights based on dynamic values.
+
+Gradients: CSS3 added support for gradient backgrounds, both linear and radial, allowing you to create smooth transitions between colors.
+
+<!-- ================================================================================================================================ -->
+<!-- -->
+Pseudo-elements allows us to create items that do not normally exist in the document tree, for example ::after.
+
+::before
+::after
+::first-letter
+::first-line
+::selection
+In the below example, the color will appear only on the first line of the paragraph.
+
+p: :first-line {
+	color: #ffOOOO;
+	font-variant: small-caps;
+}
+Pseudo-classes select regular elements but under certain conditions like when the user is hovering over the link.
+
+:link
+:visited
+:hover
+:active
+:focus
+
+<!-- ================================================================================================================================ -->
+<!-- ? -->
+
+21. What do the following CSS selectors mean?
+div, p
+div p
+div ~ p
+div + p
+div > p
+The meaning of the given list of selectors goes as follows:
+
+div, p: This selector implies selecting all div elements and all p elements.
+Consider an example below:
+
+ <h1>Heading 1</h1>
+   <div>
+       Division 1
+       <p> paragraph 1</p> <!-- Will be selected -->
+   </div>
+   <p> paragraph 2</p>
+   <p> paragraph 3</p>
+   <div>
+       Division 2
+   </div>
+   <span> Span 1 </span>
+Here, all the div elements and the p elements would be selected by the browser irrespective of their parents or where they are placed. The remaining tags like h1 and span are ignored.
+
+div p : This selector tells to select all p elements that are inside div elements. Consider an example below:
+  <h1>Heading 1</h1>
+<div>
+    Division 1
+    <p> paragraph 1</p> <!-- Will be selected -->
+    <div>
+        <p> Inner Div Paragraph </p> <!-- Will be selected -->
+    </div>
+</div>
+<p> paragraph 2</p>
+<p> paragraph 3</p>
+<div>
+    Division 2
+</div>
+<span> Span 1 </span>
+Here, <p> paragraph 1</p> and <p> Inner Div Paragraph </p> would be selected by the browser and the properties are applied. The rest of the paragraph tags are not selected.
+
+div ~ p : This selector tells to select all p elements that have div elements preceeded anywhere. Consider an example,
+<h1>Heading 1</h1>
+<div>
+   Division 1
+   <p> paragraph 1</p>
+</div>
+<p> paragraph 2</p> <!-- Will be selected -->
+<p> paragraph 3</p> <!-- Will be selected -->
+<div>
+   Division 2
+</div>
+<span> Span 1 </span>
+Here, paragraph 2 and paragraph 3 elements would be selected as marked in the code above.
+
+div + p : This selector says to select all p elements placed immediately after the div element. Consider an example in this case:
+    <h1>Heading 1</h1>
+   <div>
+       Division 1
+       <p> paragraph 1</p>
+   </div>
+   <p> paragraph 2</p> <!-- Will be selected -->
+   <p> paragraph 3</p>
+   <div>
+       Division 2
+   </div>
+   <span> Span 1 </span>
+In this case, we have paragraph 2 element immediately after the div tag. Hence, only that element will be selected.
+
+div > p : This selector says to select all p elements which has div as an immediate parent. In the same example below:
+    <h1>Heading 1</h1>
+   <div>
+       Division 1
+       <p> paragraph 1</p> <!-- Will be selected -->
+   </div>
+   <p> paragraph 2</p>
+   <p> paragraph 3</p>
+   <div>
+       Division 2
+   </div>
+   <span> Span 1 </span>
+Only <p> paragraph 1</p> will be selected in this case because it has immediate div as the parent.
+
+<!-- ================================================================================================================================ -->
+<!-- ? -->
+3. Different Box Sizing Property?
+The box-sizing CSS property sets how the total width and height of an element are calculated.
+
+Content-box: The default width and height values apply to the element's content only. The padding and border are added to the outside of the box.
+Padding-box: Width and height values apply to the element's content and its padding. The border is added to the outside of the box. Currently, only Firefox supports the padding-box value.
+Border-box: Width and height values apply to the content, padding, and border.
+
+<!-- ================================================================================================================================ -->
+<!-- ? -->

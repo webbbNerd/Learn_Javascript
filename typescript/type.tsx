@@ -61,4 +61,6 @@ arr4.push({ name: "" });
 
 const arrin: number[][] = [[23, 23, 23], [2], [21]];
 
+const readonlyarr: ReadonlyArray<number> = [];
+
 //?

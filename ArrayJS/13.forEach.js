@@ -13,9 +13,9 @@ items.forEach((item) => {
   copyItems.push(item);
 });
 
-items.forEach((item) => {
+items.forEach((item, k) => {
   if (item == "item2") {
-    items[1] = "item22";
+    items[k] = "item22";
   }
 });
 

@@ -188,3 +188,66 @@ highFunc(funct)();
 
 // =======================================================
 
+// Higher-order function that takes a callback function as an argument
+function calculate(operation, a, b) {
+  return operation(a, b);
+}
+
+// Example callback functions
+function add(x, y) {
+  return x + y;
+}
+
+// Using the higher-order function with different operations
+const result1 = calculate(add, 10, 5);        // 15
+
+console.log(result1);
+
+// =======================================================
+
+//Higher order components
+// Higher-Order Components (HOCs) are a pattern in React for enhancing the capabilities or behavior of a component.
+// They are functions that take a component and return a new component with some additional props or behavior. HOCs are a way to reuse component logic and make it more composable.
+
+import React from 'react';
+
+function withLoadingSpinner(WrappedComponent) {
+  return function WithLoadingSpinner({ isLoading, ...props }) {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    return <WrappedComponent {...props} />;
+  };
+}
+
+// Usage
+const MyComponent = ({ data }) => {
+  return <div>Data: {data}</div>;
+};
+
+const WrappedComponentWithSpinner = withLoadingSpinner(MyComponent);
+
+// Render the wrapped component
+function App() {
+  return (
+    <WrappedComponentWithSpinner isLoading={true} data="Hello, World!" />
+  );
+}
+
+export default App;
+
+
+// =======================================================
+// Pure components
+// that optimize rendering performance by automatically implementing the shouldComponentUpdate method.
+// These components are designed to prevent unnecessary renders and can help improve the efficiency of your React application.
+import React from 'react';
+
+const PureFunctionalComponent = React.memo(({ value }) => {
+  console.log('Rendered PureFunctionalComponent');
+  return <div>{value}</div>;
+});
+
+// export default PureFunctionalComponent;
+
+// =======================================================
