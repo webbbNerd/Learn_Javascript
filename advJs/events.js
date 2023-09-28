@@ -199,7 +199,7 @@ function add(x, y) {
 }
 
 // Using the higher-order function with different operations
-const result1 = calculate(add, 10, 5);        // 15
+const result1 = calculate(add, 10, 5); // 15
 
 console.log(result1);
 
@@ -209,7 +209,7 @@ console.log(result1);
 // Higher-Order Components (HOCs) are a pattern in React for enhancing the capabilities or behavior of a component.
 // They are functions that take a component and return a new component with some additional props or behavior. HOCs are a way to reuse component logic and make it more composable.
 
-import React from 'react';
+import React from "react";
 
 function withLoadingSpinner(WrappedComponent) {
   return function WithLoadingSpinner({ isLoading, ...props }) {
@@ -229,25 +229,46 @@ const WrappedComponentWithSpinner = withLoadingSpinner(MyComponent);
 
 // Render the wrapped component
 function App() {
-  return (
-    <WrappedComponentWithSpinner isLoading={true} data="Hello, World!" />
-  );
+  return <WrappedComponentWithSpinner isLoading={true} data="Hello, World!" />;
 }
 
 export default App;
-
 
 // =======================================================
 // Pure components
 // that optimize rendering performance by automatically implementing the shouldComponentUpdate method.
 // These components are designed to prevent unnecessary renders and can help improve the efficiency of your React application.
-import React from 'react';
+import React from "react";
 
 const PureFunctionalComponent = React.memo(({ value }) => {
-  console.log('Rendered PureFunctionalComponent');
+  console.log("Rendered PureFunctionalComponent");
   return <div>{value}</div>;
 });
 
 // export default PureFunctionalComponent;
+
+// =======================================================
+// promise
+// The Promise.any() method is one of the promise concurrency methods.
+// This method is useful for returning the first promise that fulfills. It short-circuits after a promise fulfills,
+// so it does not wait for the other promises to complete once it finds one.
+
+// Unlike Promise.all(), which returns an array of fulfillment values, we only get one fulfillment value (assuming at least one promise fulfills).
+// This can be beneficial if we need only one promise to fulfill but we do not care which one does. Note another difference: this method rejects upon receiving an empty iterable,
+//  since, truthfully, the iterable contains no items that fulfill. You may compare Promise.any() and Promise.all() with Array.prototype.some() and Array.prototype.every().
+
+// Also, unlike Promise.race(), which returns the first settled value (either fulfillment or rejection),
+// this method returns the first fulfilled value. This method ignores all rejected promises up until the first promise that fulfills.
+
+// =======================================================
+// stack resolve
+callstack = []
+taskqueue = [setTimeoout]
+microtaskqueue = [promise] // more prirority then taskqueue
+
+
+// =======================================================
+//? forEach
+arr.forEach((val, i,arr) => arr[i] = val * 2)
 
 // =======================================================

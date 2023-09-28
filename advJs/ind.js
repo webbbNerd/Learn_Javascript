@@ -263,6 +263,8 @@ var obj = { name: "Utkarsh", class: "Master" };
 // callFunc.apply(obj, ["Singh", 10]);.
 callFunc.bind(obj, "Singh")();
 
+// function calls object with these methods and can access values inside object with extra ropsp
+
 // ---------------------------------------------------------------------------------------------
 //? obj prototype
 const obj = {
@@ -296,5 +298,3 @@ console.log(obj2.getRoll()); // play
 //? WeakMap
 // can't iterate through it
 // can only store objrcts
-
-

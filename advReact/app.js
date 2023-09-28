@@ -50,4 +50,110 @@ const isodd = useCallback(() => {
   console.log("hello I will only run for dependency");
 }, [dependecy]);
 
-//
+// Timer code
+
+import { useState, useRef } from "react";
+import "./styles.css";
+
+export default function App() {
+  let [min, setMin] = useState(59);
+  var [sec, setSec] = useState(59);
+  const [start, setStart] = useState(false);
+  const timer = useRef();
+
+  const startTimer = () => {
+    console.log(timer, start);
+    if (start) {
+      console.log("hello");
+      clearInterval(timer.current);
+      setStart(false);
+    } else {
+      setStart(true);
+      timer.current = setInterval(() => {
+        setSec((prev) => {
+          if (prev <= 0) {
+            console.log("rann");
+            setMin((prev) => prev - 1);
+            return 59;
+          } else {
+            return prev - 1;
+          }
+        });
+      }, 1000);
+    }
+  };
+
+  const resetTimer = () => {
+    clearInterval(timer.current);
+    setSec(59);
+    setMin(59);
+  };
+
+  return (
+    <div className="App">
+      <input value={min} onChange={(e) => setMin(e.target.value)} />
+      <input value={sec} onChange={(e) => setSec(e.target.value)} />
+      <button onClick={startTimer}>{start ? "Stop" : "Start"}</button>
+      <button onClick={resetTimer}>Reset</button>
+    </div>
+  );
+}
+// anothertimer
+
+import { useState, useRef, useEffect } from "react";
+import "./styles.css";
+
+export default function App() {
+  let [min, setMin] = useState(59);
+  var [sec, setSec] = useState(59);
+  const [start, setStart] = useState(false);
+  const timer = useRef();
+  const timerSet = () => {};
+  useEffect(() => {
+    let timer;
+    if (start && !timer) {
+      timer = setInterval(() => {
+        if (sec == 0) {
+          if (min == 0) {
+            clearInterval(timer);
+            setStart(false);
+          } else {
+            setMin((prev) => prev - 1);
+            setSec(59);
+          }
+        } else {
+          setSec((prev) => prev - 1);
+        }
+      }, 1000);
+    } else {
+      clearInterval(timer);
+    }
+    return () => clearInterval(timer);
+  }, [start, sec, min]);
+
+  return (
+    <div className="App">
+      <input value={min} onChange={(e) => setMin(e.target.value)} />
+      <input value={sec} onChange={(e) => setSec(e.target.value)} />
+      <button
+        onClick={() => {
+          setStart(!start);
+        }}
+      >
+        {start ? "Stop" : "Start"}
+      </button>
+      {/* <button onClick={resetTimer}>Reset</button> */}
+    </div>
+  );
+}
+
+
+
+// debouce customer hook
+
+import { useDebounce } from "./hook";
+
+const debounce = useDebounce(value);
+useEffect(() => {
+  console.log(input);
+}, [debounce]);

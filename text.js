@@ -15,3 +15,6 @@ function hello(arr, n){
 const arr = [4,1,3,9,7]
 hello(arr,5)
 
+var x = 20
+console.log(x)
+let x = 0
