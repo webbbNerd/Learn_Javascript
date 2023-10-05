@@ -298,3 +298,5 @@ console.log(obj2.getRoll()); // play
 //? WeakMap
 // can't iterate through it
 // can only store objrcts
+
+// ---------------------------------------------------------------------------------------------
