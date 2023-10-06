@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+.bulb {
+  width: 100px;
+  height: 150px;
+  border: 1px solid cornflowerblue;
+  border-radius: 45%;
+  /* margin: 0 auto; */
+  transform: rotate3d(1, 1, 1, 45deg);
+  position: relative;
+}
+
+.active {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: yellow;
+}
+.buttonWrapper {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
