@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <p class="container__heading">Countdown Timer</p>
+      <div class="container__labels">
+        <p class="hourName">Hours</p>
+        <p class="minName">min</p>
+        <p class="secName">Sec</p>
+      </div>
+      <div class="container__inputs">
+        <input
+          type="number"
+          oninput="this.value
+          =this.value.slice(0,this.maxLength)"
+          maxlength="2"
+          placeholder="00"
+          class="container__inputs--time hour"
+        />
+        <p class="colon">:</p>
+        <input
+          type="number"
+          oninput="this.value
+          =this.value.slice(0,this.maxLength)"
+          maxlength="2"
+          placeholder="00"
+          class="container__inputs--time min"
+        />
+        <p class="colon">:</p>
+        <input
+          type="number"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          maxlength="2"
+          placeholder="00"
+          class="container__inputs--time sec"
+        />
+      </div>
+      <div class="container__buttons">
+        <button class="container__btn start">Start</button>
+        <button class="container__btn stop">Stop</button>
+        <button class="container__btn reset">Reset</button>
+      </div>
+    </div>
+    <script src="./src/index.js" type="module"></script>
+  </body>
+</html>
