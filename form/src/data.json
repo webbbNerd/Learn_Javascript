@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1001,
+    "firstName": "Thomas",
+    "email": "Thomas.Leannon@dummyapis.com",
+    "number": "4121091095",
+    "dob": "26/08/1979"
+  },
+  {
+    "id": 1002,
+    "firstName": "Faye",
+    "email": "Faye.Sauer@dummyapis.com",
+    "number": "4914696673",
+    "dob": "28/06/1962"
+  }
+]

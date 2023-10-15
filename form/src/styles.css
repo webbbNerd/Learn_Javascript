@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px;
+}

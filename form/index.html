@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <p>Welcome !!</p>
+      <button class="formButton">Add Form</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No.</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody class="empDataList"></tbody>
+      </table>
+
+      <form class="form">
+        <label>Name</label>
+        <input type="name" placeholder="Name" name="firstName" required />
+        <label>Email</label>
+        <input type="email" placeholder="Email" name="email" />
+        <label>PhoneNo.</label>
+        <input
+          type="number"
+          pattern="[0-9]"
+          maxlength="10"
+          placeholder="Number"
+          name="number"
+        />
+        <span class="numberError"></span>
+        <label>Date</label>
+        <input type="date" placeholder="Date" name="dob" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
